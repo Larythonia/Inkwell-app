@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  /* Brand colour palette */
+  --color-brand-10:  #e9f2f4;
+  --color-brand-20:  #ddebee;
+  --color-brand-50:  #bad6db;
+  --color-brand-500: #1f7a8c;
+  --color-brand-600: #1c6e7e;
+ 
+ --color-brandr-50: #fdecec;
+  --color-brandr-100: #fde3e3;
+  --color-brandr-200: #fac5c5;
+  --color-brandr-300: #ef4444;
+
+   --color-brandg-100: #d9dfe1;
+   --color-brandg-200: #b1bdc2;
+   --color-brandg-500: #022b3a;
+
+  /* Font stack — Inter is loaded from Google Fonts in index.html */
+  --font-sans: "Poppins", system-ui;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: theme(--color-white);
+    color: theme(--color-black);
+    font-family: var(--font-sans);
+    min-height: 100vh;
+  }
+}
