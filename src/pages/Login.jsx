@@ -57,21 +57,21 @@ const Login = () => {
 
   return (
     <main className="min-h-screen flex items-center justify-center ">
-      <div className="max-h[60vw]">
-        <div className="min-w max-w-md max-h[60vh]" >
-        <div className="flex justify-center h-15 ">
+
+      <div className="min-w max-w-md" >
+        <div className="flex justify-center h-10 ">
           <img src="/inkwell-logo.png" />
         </div>
 
-        <div className="bg-white rounded-2xl p-8 border-2 border-brandg-500">
+        <div className="bg-white rounded-2xl p-6 border-2 border-brandg-500">
           <div className="text-center">
             <h1 className="text-xl">Welcome back.</h1>
-            <p className="text-sm mt-1 mb-6 ">Sign in to continue reading</p>
+            <p className="text-sm mt-1 mb-4 ">Sign in to continue reading</p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-3">
             <div className="space-y-1">
-              <label className="block mb-3">Full name</label>
+              <label className="block mb-2">Full name</label>
               <input
                 type="text"
                 name="fullname"
@@ -84,7 +84,7 @@ const Login = () => {
             </div>
 
             <div className="space-y-1">
-              <label className="block mb-3">Email</label>
+              <label className="block mb-2">Email</label>
               <input
                 type="email"
                 name="email"
@@ -96,7 +96,7 @@ const Login = () => {
               />
             </div>
 
-            <label className="block mb-3">Password</label>
+            <label className="block mb-2">Password</label>
             <div
               className=" flex items-center justify-between border border-gray-300 rounded-lg p-4 hover:bg-brand-20 hover:border-2 focus-within:ring-1 focus-within:ring-brand-20
         focus-within:border-brand-500"
@@ -154,7 +154,6 @@ const Login = () => {
             </p>
           </div>
         </div>
-      </div>
       </div>
       
     </main>
