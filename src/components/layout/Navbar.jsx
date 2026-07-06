@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <main className="flex justify-between items-center bg-brand-50 fixed top-0 left-0 right-0 w-full px-32 py-5 z-200">
+    <main className="flex justify-between items-center bg-brand-50 fixed top-0 left-0 right-0 w-full px-32 py-4 z-200">
       <div className="w-20">
         <img src="/inkwell-logo.png" />
       </div>
