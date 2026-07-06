@@ -20,11 +20,11 @@ function BlogCard({ id, title, excerpt, image, author}) {
       />
 
       <div className="flex flex-1 flex-col pl-2 pr-4">
-        <h2 className="mt-2 text-sm font-medium text-black line-clamp-2 min-h-[3.5rem]">
+        <h2 className="mt-2 text-sm leading-none font-medium text-black line-clamp-2 min-h-[3.5rem]">
           {title}
         </h2>
 
-        <p className="min-h-[3.5rem] text-xs text-black line-clamp-3">
+        <p className="min-h-[3.8rem] text-xs text-black line-clamp-3">
           {excerpt}
         </p>
 

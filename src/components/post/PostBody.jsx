@@ -7,7 +7,7 @@ const PostBody = ({title, bodyHtml}) => {
         {title}
       </h2>
 
-      <div className="prose prose-sm max-w-none text-black text-base"
+      <div className="prose prose-sm max-w-none text-black text-sm"
       dangerouslySetInnerHTML={{__html: bodyHtml}}>
         
       </div>
