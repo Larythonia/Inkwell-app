@@ -20,11 +20,11 @@ function BlogCard({ id, title, excerpt, image, author}) {
       />
 
       <div className="flex flex-1 flex-col pl-2 pr-4">
-        <h2 className="mt-2 text-sm leading-none font-medium text-black line-clamp-2 min-h-[2rem]">
+        <h2 className="mt-2 text-sm leading-none font-medium text-black line-clamp-2 min-h-[1.8rem]">
           {title}
         </h2>
 
-        <p className="min-h-[3rem] text-xs py-2 text-black line-clamp-3">
+        <p className="min-h-[2.5rem] text-xs py-2 text-black line-clamp-3">
           {excerpt}
         </p>
 
@@ -41,7 +41,7 @@ function BlogCard({ id, title, excerpt, image, author}) {
         <div className="mb-1 flex justify-end ">
           <p
             onClick={handleRead}
-            className="pr-4 text-sm font-medium flex items-center justify-end gap-1 text-brand-500 hover:text-brand-600 cursor-pointer">
+            className="pr-4 text-xs font-medium flex items-center justify-end gap-1 text-brand-500 hover:text-brand-600 cursor-pointer">
             Read
             <ArrowRight className="w-4 h-4" />
           </p>
