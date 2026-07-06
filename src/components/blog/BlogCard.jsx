@@ -11,7 +11,7 @@ function BlogCard({ id, title, excerpt, image, author}) {
   };
 
   return (
-    <div className='h-full flex flex-col border-5 border-brandg-100 rounded-4xl transition-transform duration-300 hover:scale-105'>
+    <div className='h-full flex flex-col border-3 border-brandg-100 rounded-4xl transition-transform duration-300 hover:scale-105'>
       <img
         src={image}
         alt={title}
@@ -20,22 +20,22 @@ function BlogCard({ id, title, excerpt, image, author}) {
       />
 
       <div className="flex flex-1 flex-col pl-2 pr-4">
-        <h2 className="mt-2 text-sm font-medium text-black line-clamp-2 min-h-[3.8rem]">
+        <h2 className="mt-2 text-sm font-medium text-black line-clamp-2 min-h-[3.5rem]">
           {title}
         </h2>
 
-        <p className="min-h-[rem] text-sm text-black line-clamp-3">
+        <p className="min-h-[3.5rem] text-xs text-black line-clamp-3">
           {excerpt}
         </p>
 
-        <div className=" flex items-center gap-2 min-h-[3rem]">
+        <div className=" flex items-center gap-2 min-h-23rem]">
           <img
             src={authorAvatar}
             alt={authorName}
             loading="lazy"
-            className="h-6 w-6 rounded-full object-cover"
+            className="h-5 w-5 rounded-full object-cover"
           />
-          <span className="text-base text-black">{authorName}</span>
+          <span className="text-sm text-black">{authorName}</span>
         </div>
       
         <div className="mb-1 flex justify-end ">

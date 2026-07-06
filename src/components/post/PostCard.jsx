@@ -25,11 +25,11 @@ function PostCard({
       <div className="">
         <div className="flex justify-between pt-2">
           {publishedDate && (
-            <p className="text-xs text-black">{publishedDate}</p>
+            <p className="text-[10px] text-black">{publishedDate}</p>
           )}
 
           {readTime && (
-            <p className="text-xs pr-12 text-black">{readTime} mins read</p>
+            <p className="text-[10px] pr-12 text-black">{readTime} mins read</p>
           )}
         </div>
 
@@ -37,7 +37,7 @@ function PostCard({
           {title}
         </h2>
 
-        <p className="text-sm pt-2 text-black line-clamp-3 min-h-[4rem]">
+        <p className="text-xs pt-2 text-black line-clamp-3 min-h-[3.5rem]">
           {excerpt}
         </p>
 
@@ -49,12 +49,12 @@ function PostCard({
             className="h-5 w-5 rounded-full object-cover"
           />
 
-          <p className="text-x text-black font-semibold">
+          <p className="text-sm text-black font-semibold">
             {authorName}
 
             <span className="px-1">.</span>
           </p>
-          <span onClick={handleRead} className="text-black text-sm">
+          <span onClick={handleRead} className="text-black text-xs">
             {" "}
             Writer
           </span>
