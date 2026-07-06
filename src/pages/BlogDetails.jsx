@@ -28,7 +28,7 @@ function BlogDetails() {
       <div className="">
       <button
         onClick={() => navigate(-1)}
-        className="flex items-center gap-2 text-brand-500 hover:text-brand-600 m-6"
+        className="flex items-center gap-2 text-brand-500 hover:text-brand-600 mb-6"
       >
         <ArrowLeft className="w-4 h-4" /> Back to post
       </button>

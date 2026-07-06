@@ -33,7 +33,7 @@ function PostCard({
           )}
         </div>
 
-        <h2 className="pt-3 text-x min-h-[3.5rem] font-semibold text-black line-clamp-1">
+        <h2 className="pt-3 text-sm min-h-[3.5rem] font-semibold text-black line-clamp-1">
           {title}
         </h2>
 

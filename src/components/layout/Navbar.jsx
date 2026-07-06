@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <main className="flex justify-between items-center bg-brand-50 fixed top-0 left-0 right-0 w-full px-32 py-4 mb-20 z-200">
+    <main className="flex justify-between items-center bg-brand-50 fixed top-0 left-0 right-0 w-full px-32 py-3 mb-20 z-200">
       <div className="w-20">
         <img src="/inkwell-logo.png" />
       </div>
@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className="flex justify-center items-center">
           <User className="w-8 h-8 bg-brand-10 rounded-full p-1" />
         <span className="px-2">
-          {user?.fullnam?.split(" ")[0] || "Guest"}</span>
+          {user?.fullname?.split(" ")[0] || "Guest"}</span>
         </div>
     
         <div>
