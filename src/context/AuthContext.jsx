@@ -11,7 +11,7 @@ const AuthProvider = ({ children }) => {
   const login = (fullname, email, password) => {
     if (!fullname || !email || !password) {
       return { success: false, error: "All fields are required" };
-    }
+    };
 
     const fakeUser = { fullname, email };
 
