@@ -28,14 +28,14 @@ function BlogCard({ id, title, excerpt, image, author}) {
           {excerpt}
         </p>
 
-        <div className=" flex items-center gap-2 min-h-23rem]">
+        <div className=" flex items-center gap-2 min-h-[2rem]">
           <img
             src={authorAvatar}
             alt={authorName}
             loading="lazy"
             className="h-5 w-5 rounded-full object-cover"
           />
-          <span className="text-sm text-black">{authorName}</span>
+          <span className="text-xs text-black">{authorName}</span>
         </div>
       
         <div className="mb-1 flex justify-end ">

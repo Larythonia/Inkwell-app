@@ -6,7 +6,7 @@ import Navbar from "./Navbar";
     <>
       <Navbar />
 
-      <main className="py-8 px-16 mt-20">
+      <main className="py-8 px-12 mt-20">
         <Outlet />
       </main>
     </>
