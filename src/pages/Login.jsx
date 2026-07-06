@@ -57,7 +57,7 @@ const Login = () => {
 
   return (
     <main className="min-h-screen flex items-center justify-center ">
-      <div className="w-full max-w-md min-h[60vh] bg-brand-600" >
+      <div className="max-w-md max-h[60vh] bg-brand-600" >
         <div className="flex justify-center h-15 ">
           <img src="/inkwell-logo.png" />
         </div>

@@ -33,15 +33,15 @@ function PostCard({
           )}
         </div>
 
-        <h2 className="pt-3 text-sm min-h-[3.5rem] font-semibold text-black line-clamp-1">
+        <h2 className="pt-3 text-sm min-h-[2rem] font-semibold text-black line-clamp-1">
           {title}
         </h2>
 
-        <p className="text-xs pt-2 text-black line-clamp-3 min-h-[3.5rem]">
+        <p className="text-xs py-2 text-black line-clamp-3 min-h-[3rem]">
           {excerpt}
         </p>
 
-        <div className="flex items-center gap-2 min-h-[2rem]">
+        <div className="flex items-center gap-2 min-h-[1rem]">
           <img
             src={authorAvatar}
             alt={authorName}
