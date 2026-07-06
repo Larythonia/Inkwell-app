@@ -37,7 +37,7 @@ function PostCard({
           {title}
         </h2>
 
-        <p className="text-xs py-2 text-black line-clamp-3 min-h-[3rem]">
+        <p className="text-xs py-2 text-black line-clamp-3 min-h-[2.5rem]">
           {excerpt}
         </p>
 
