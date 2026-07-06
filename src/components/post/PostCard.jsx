@@ -29,7 +29,7 @@ function PostCard({
           )}
 
           {readTime && (
-            <p className="text-sm pr-8 text-black">{readTime} mins read</p>
+            <p className="text-sm pr-12 text-black">{readTime} mins read</p>
           )}
         </div>
 
@@ -37,7 +37,7 @@ function PostCard({
           {title}
         </h2>
 
-        <p className="text-x pt-2 text-black line-clamp-3 min-h-[4rem]">
+        <p className="text-sm pt-2 text-black line-clamp-3 min-h-[4rem]">
           {excerpt}
         </p>
 
