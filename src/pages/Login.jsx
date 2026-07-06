@@ -59,7 +59,7 @@ const Login = () => {
     <main className="min-h-[80vh] flex items-center justify-center ">
       <div className="w-full max-w-md ">
         <div className="flex justify-center m-6 h-15 ">
-          <img src="public/inkwell-logo.png" />
+          <img src="/inkwell-logo.png" />
         </div>
 
         <div className="bg-white rounded-2xl p-8 border-2 border-brandg-500">
