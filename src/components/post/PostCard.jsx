@@ -25,11 +25,11 @@ function PostCard({
       <div className="">
         <div className="flex justify-between pt-2">
           {publishedDate && (
-            <p className="text-sm text-black">{publishedDate}</p>
+            <p className="text-xs text-black">{publishedDate}</p>
           )}
 
           {readTime && (
-            <p className="text-sm pr-12 text-black">{readTime} mins read</p>
+            <p className="text-xs pr-12 text-black">{readTime} mins read</p>
           )}
         </div>
 
