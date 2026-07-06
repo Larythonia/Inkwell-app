@@ -19,7 +19,7 @@ function PostCard({
         src={image}
         alt={title}
         loading="lazy"
-        className="w-full h-45 aspect-[4/3] p-2 rounded-2xl"
+        className="w-full h-40 aspect-[4/3] p-2 rounded-2xl"
       />
 
       <div className="">
@@ -29,7 +29,7 @@ function PostCard({
           )}
 
           {readTime && (
-            <p className="text-sm pr-12 text-black">{readTime} mins read</p>
+            <p className="text-sm pr-8 text-black">{readTime} mins read</p>
           )}
         </div>
 

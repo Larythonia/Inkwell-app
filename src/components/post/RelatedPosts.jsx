@@ -34,7 +34,7 @@ function RelatedPosts({ username, excludeId }) {
   return (
     <div className="mt-12">
       <h3 className="text-lg font-bold text-black mb-4">More from this writer</h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 ">
         {posts.map(post => (
           <PostCard
             key={post.id}
