@@ -24,7 +24,7 @@ function BlogCard({ id, title, excerpt, image, author}) {
           {title}
         </h2>
 
-        <p className="min-h-[1.5rem] text-xs py-2 text-black line-clamp-3">
+        <p className="min-h-[1.4rem] text-xs py-2 text-black line-clamp-3">
           {excerpt}
         </p>
 
