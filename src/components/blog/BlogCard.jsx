@@ -24,7 +24,7 @@ function BlogCard({ id, title, excerpt, image, author}) {
           {title}
         </h2>
 
-        <p className="h-13 overflow-hidden break-words text-xs py-3 text-black line-clamp-3">
+        <p className="h-14.5 overflow-hidden break-words text-xs py-1 text-black line-clamp-3">
           {excerpt}
         </p>
 
