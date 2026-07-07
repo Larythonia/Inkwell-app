@@ -13,7 +13,7 @@ const Navbar = () => {
   };
 
   return (
-    <main className="flex justify-between items-center bg-brand-50 fixed top-0 left-0 right-0 w-full px-25 py-3 z-200">
+    <main className="flex justify-between items-center bg-brand-50 fixed top-0 left-0 right-0 w-full px-16 py-3 z-200">
       <div className="w-20">
         <img src="/inkwell-logo.png" />
       </div>
@@ -27,7 +27,7 @@ const Navbar = () => {
     
         <div>
           <Button variant="secondary" size="sm" onClick={handleLogout}>
-            Logout
+            Log out
           </Button>
         </div>
       </div>

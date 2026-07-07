@@ -58,20 +58,20 @@ const Login = () => {
   return (
     <main className="min-h-screen flex items-center justify-center ">
 
-      <div className="w-full max-w-md" >
-        <div className="flex justify-center h-10 ">
+      <div className="w-full max-w-sm" >
+        <div className="flex justify-center h-10 mb-3">
           <img src="/inkwell-logo.png" />
         </div>
 
         <div className="bg-white rounded-2xl p-6 border-2 border-brandg-500">
           <div className="text-center">
             <h1 className="text-xl">Welcome back.</h1>
-            <p className="text-sm mt-1 mb-4 ">Sign in to continue reading</p>
+            <p className="text-sm mt1 mb-3 ">Sign in to continue reading</p>
           </div>
 
-          <form onSubmit={handleSubmit} className="space-y-3">
+          <form onSubmit={handleSubmit} className="space-y-4">
             <div className="space-y-1">
-              <label className="block mb-2">Full name</label>
+              <label className="block mb-1 text-sm">Full name</label>
               <input
                 type="text"
                 name="fullname"
@@ -79,12 +79,12 @@ const Login = () => {
                 onChange={handleChange}
                 placeholder="Full name"
                 required
-                className="w-full border border-gray-300 placeholder:text-brandg-200 text-black text-xs rounded-lg p-4 focus:outline-none hover:bg-brand-20 hover:border-2 focus:ring-2 focus:ring-brand-500 focus:bg-brand-20"
+                className="w-full border border-gray-300 placeholder:text-brandg-200 text-black text-xs rounded-lg p-3 focus:outline-none hover:bg-brand-20 hover:border-2 focus:ring-2 focus:ring-brand-500 focus:bg-brand-20"
               />
             </div>
 
             <div className="space-y-1">
-              <label className="block mb-2">Email</label>
+              <label className="block mb-1 text-sm">Email</label>
               <input
                 type="email"
                 name="email"
@@ -92,13 +92,13 @@ const Login = () => {
                 onChange={handleChange}
                 placeholder="Email"
                 required
-                className="w-full border border-gray-300 placeholder:text-brandg-200 text-black text-xs rounded-lg p-4 hover:bg-brand-20 hover:border-2 focus:outline-none focus:ring-2 focus: ring-brand-500 "
+                className="w-full border border-gray-300 placeholder:text-brandg-200 text-black text-xs rounded-lg p-3 hover:bg-brand-20 hover:border-2 focus:outline-none focus:ring-2 focus: ring-brand-500 "
               />
             </div>
 
-            <label className="block mb-2">Password</label>
+            <label className="block mb-1 text-sm">Password</label>
             <div
-              className=" flex items-center justify-between border border-gray-300 rounded-lg p-4 hover:bg-brand-20 hover:border-2 focus-within:ring-1 focus-within:ring-brand-20
+              className=" flex items-center justify-between border border-gray-300 rounded-lg p-3 hover:bg-brand-20 hover:border-2 focus-within:ring-1 focus-within:ring-brand-20
         focus-within:border-brand-500"
             >
               <input

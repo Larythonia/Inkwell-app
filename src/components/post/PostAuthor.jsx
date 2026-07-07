@@ -36,7 +36,7 @@ const AuthorRow = ({ author, publishedDate }) => {
 ];
 
   return (
-    <div className=" flex items-center justify-between gap-5 min-h-[2rem] my-5">
+    <div className="flex flex-col lg:flex-row lg:items-center sm:items-start justify-between gap-3 min-h-[2rem] my-5">
       <div className="gap-5 flex items-center">
         <img
           src={authorAvatar}
@@ -50,8 +50,8 @@ const AuthorRow = ({ author, publishedDate }) => {
         </div>
       </div>
 
-       <div className="flex items-center gap-2">
-        <span className="text-sm">Share this post</span>
+       <div className="flex items-center gap-2 mr-6">
+        <span className="text-sm mr-4">Share this post</span>
         {shareLinks.map(({ icon: Icon, url, color, bg }, id) => (
           <a
             key={id}
@@ -59,6 +59,7 @@ const AuthorRow = ({ author, publishedDate }) => {
             target="_blank"
             rel="noopener noreferrer"
             className={`transition p-1  ${color}, ${bg}`}
+      
           >
             <Icon className="w-4 h-4 text-white " />
           </a>
