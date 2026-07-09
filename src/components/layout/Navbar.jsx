@@ -16,7 +16,7 @@ const Navbar = () => {
   };
 
   return (
-    <main className="flex justify-between items-center bg-brand-50 fixed top-0 left-0 right-0 w-full px-16 py-3 z-50">
+    <main className="flex justify-between items-center bg-brand-50 fixed top-0 left-0 right-0 w-full px-9 sm:px-10 md:px-16 py-3 z-50">
       <div className="w-20">
         <img src="/inkwell-logo.png" />
       </div>
@@ -44,11 +44,11 @@ const Navbar = () => {
 
         {/*Mobile Dropdown menu */}
           {menuOpen && (
-            <div className="md:hidden flex flex-col h-40 gap-2 p-5 fixed top-14 right-0 bg-brand-50 z-30">
-             
+            <div className="md:hidden flex flex-col h-38 gap-2 p-4 fixed top-14 right-0 bg-brand-50 z-30">
+        
 
                 <div className="flex flex-col items-center gap-2">
-            <User className="w-8 h-8 bg-brand-10 rounded-full p-1" />
+            <User className="w-7 h-7 bg-brand-10 rounded-full p-1" />
             <span>{user?.fullname?.split(" ")[0] || "Guest"}</span>
           </div>
 
