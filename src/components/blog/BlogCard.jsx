@@ -10,6 +10,11 @@ function BlogCard({ id, title, excerpt, image, author}) {
   navigate(`/blog/${id}`);
   };
 
+  const trimText = (text, maxLength = 80) => {
+  if (text.length <= maxLength) return text;
+  return text.slice(0, maxLength) + "...";
+};
+
   return (
     <div className='h-full flex flex-col border-3 border-brandg-100 rounded-4xl transition-transform duration-300 hover:scale-105'>
       <img
@@ -24,8 +29,8 @@ function BlogCard({ id, title, excerpt, image, author}) {
           {title}
         </h2>
 
-        <p className="h-14.5 overflow-hidden break-words text-xs py-1 text-black line-clamp-3">
-          {excerpt}
+        <p className="lg:min-h-14 sm:h-6 overflow-hidden break-words text-xs py-1 text-black">
+          {trimText(excerpt)}
         </p>
 
         <div className=" flex items-center gap-2 min-h-[1rem]">
