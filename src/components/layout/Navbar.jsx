@@ -2,14 +2,17 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import { User } from "lucide-react";
 import { Button } from "../ui/Button";
+import { useState } from "react";
 
 const Navbar = () => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleLogout = () => {
     logout();
     navigate("/");
+    setMenuOpen(false);
   };
 
   return (
@@ -18,7 +21,8 @@ const Navbar = () => {
         <img src="/inkwell-logo.png" />
       </div>
 
-      <div className="flex justify-center items-center gap-6">
+      {/* Desktop Max */}
+      <div className="hidden md:flex justify-center items-center gap-6">
         <div className="flex justify-center items-center">
           <User className="w-8 h-8 bg-brand-10 rounded-full p-1" />
         <span className="px-2">
@@ -31,6 +35,28 @@ const Navbar = () => {
           </Button>
         </div>
       </div>
+
+      {/*Mobile hamburger */}
+      <Button className="md:hidden text-white"
+          onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? "X" : "☰"}
+          </Button>
+
+        {/*Mobile Dropdown menu */}
+          {menuOpen && (
+            <div className="md:hidden flex flex-col h-40 gap-2 p-5 fixed top-14 right-0 bg-brand-50 z-30">
+             
+
+                <div className="flex flex-col items-center gap-2">
+            <User className="w-8 h-8 bg-brand-10 rounded-full p-1" />
+            <span>{user?.fullname?.split(" ")[0] || "Guest"}</span>
+          </div>
+
+          <Button variant="secondary" size="sm" onClick={handleLogout}>
+            Log out
+          </Button>
+            </div>
+          )}
     </main>
   );
 };
