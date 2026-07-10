@@ -5,25 +5,21 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import { Button } from "../components/ui/Button";
 
-const Login = () => {
+const Signup = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { login, isAuthenticated } = useAuth();
+  const { signup, isAuthenticated } = useAuth();
 
   const [form, setForm] = useState({
+    fullname: "",
     email: "",
     password: "",
+    confirmPassword:"",
   });
 
   const [error, setError] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-
-  useEffect(() => {
-    if (isAuthenticated) {
-      navigate("/bloglisting", { replace: true });
-    }
-  }, [isAuthenticated, navigate]);
 
   const onToggle = () => {
     setShowPassword(!showPassword);
@@ -41,9 +37,15 @@ const Login = () => {
     e.preventDefault();
     // Handle form submission logic here
     setError("");
+
+    if (form.password !== form.confirmPassword) {
+      setError("Passwords do not match");
+      return;
+    }
+
     setIsSubmitting(true);
 
-    const result = login(form.email, form.password);
+    const result = signup(form.fullname, form.email, form.password, form.confirmPassword);
 
     if (!result.success) {
       setError(result.error);
@@ -51,14 +53,13 @@ const Login = () => {
       return;
     }
 
-    const destination = location.state?.from?.pathname || "/bloglisting";
+    const destination = location.state?.from?.pathname || "/";
     navigate(destination, { replace: true });
   };
 
   return (
     <main className="min-h-screen flex items-center justify-center ">
-
-      <div className="w-full max-w-sm" >
+      <div className="w-full max-w-sm">
         <div className="flex justify-center h-10 mb-3">
           <img src="/inkwell-logo.png" />
         </div>
@@ -66,10 +67,22 @@ const Login = () => {
         <div className="bg-white rounded-2xl p-6 border-2 border-brandg-500">
           <div className="text-center">
             <h1 className="text-xl">Welcome back.</h1>
-            <p className="text-sm mt1 mb-3 ">Sign in to continue reading</p>
+            <p className="text-sm mt1 mb-3 ">Sign up to continue reading</p>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="space-y-1">
+              <label className="block mb-1 text-sm">Full name</label>
+              <input
+                type="text"
+                name="fullname"
+                value={form.fullname}
+                onChange={handleChange}
+                placeholder="Full name"
+                required
+                className="w-full border border-gray-300 placeholder:text-brandg-200 text-black text-xs rounded-lg p-3 focus:outline-none hover:bg-brand-20 hover:border-2 focus:ring-2 focus:ring-brand-500 focus:bg-brand-20"
+              />
+            </div>
 
             <div className="space-y-1">
               <label className="block mb-1 text-sm">Email</label>
@@ -107,6 +120,29 @@ const Login = () => {
               </span>
             </div>
 
+            <label className="block mb-1 text-sm">Confirm Password</label>
+            <div
+              className=" flex items-center justify-between border border-gray-300 rounded-lg p-3 hover:bg-brand-20 hover:border-2 focus-within:ring-1 focus-within:ring-brand-20
+        focus-within:border-brand-500"
+            >
+              <input
+                type={showPassword ? "text" : "password"}
+                name="confirmPassword"
+                value={form.confirmPassword}
+                onChange={handleChange}
+                placeholder="confirmPassword"
+                required
+                className="border-none placeholder:text-brandg-200 text-black text-xs w-full focus:border-none focus:outline-none focus:ring-0"
+              />
+              <span className="px-2" onClick={onToggle}>
+                {showPassword ? (
+                  <FaEyeSlash className="text-black cursor-pointer" />
+                ) : (
+                  <FaEye className="text-black cursor-pointer" />
+                )}
+              </span>
+            </div>
+
             {error && (
               <p className="text-red-400 text-sm bg-red-900/20 border border-red-800 rounded-lg p-3">
                 {error}
@@ -123,11 +159,11 @@ const Login = () => {
               >
                 {isSubmitting ? (
                   <span className="flex items-center justify-center gap-4">
-                    Logging in...
+                    Signing up...
                     <span className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin" />
                   </span>
                 ) : (
-                  "Login"
+                  "Sign up"
                 )}
               </Button>
             </div>
@@ -135,18 +171,17 @@ const Login = () => {
 
           <div>
             <p className="text-sm mt-4 text-center">
-              Don't have an account?
-              
-              <Link to="/signup" className="text-brand-500">
-                <span>Sign up</span>
-             </Link>
+              Already have an account?
+
+              <Link to="/">
+                <span className="text-brand-500"> Login</span>
+              </Link>
             </p>
           </div>
         </div>
       </div>
-      
     </main>
   );
 };
 
-export default Login;
+export default Signup;
