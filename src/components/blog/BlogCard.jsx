@@ -16,15 +16,14 @@ function BlogCard({ id, title, excerpt, image, author }) {
   };
 
   return (
-    <div className="h-full flex flex-col border-3 border-brandg-100 rounded-4xl transition-transform duration-300 hover:scale-105">
+    <div className="h-full flex flex-col border-2 border-brandg-100 rounded-3xl transition-transform duration-300 hover:scale-105">
       <img
         src={image}
         alt={title}
-        loading="lazy"
-        className="rounded-xl aspect-[4/3] w-full object-cover"
+        className="aspect-[4/3] w-full object-cover border-brandg-100 rounded-3xl"
       />
 
-      <div className="flex flex-1 flex-col pl-2 pr-4">
+      <div className="flex flex-1 flex-col px-4">
         <h2 className="mt-2 text-sm leading-none font-medium text-black line-clamp-2 min-h-[1.6rem]">
           {title}
         </h2>

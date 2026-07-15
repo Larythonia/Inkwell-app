@@ -27,7 +27,7 @@ function PostCard({
         className="w-full h-40 aspect-[4/3] p-2 rounded-2xl"
       />
 
-      <div className="">
+      <div className="px-2">
         <div className="flex justify-between pt-2">
           {publishedDate && (
             <p className="text-[10px] text-black">{publishedDate}</p>

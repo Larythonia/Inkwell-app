@@ -18,7 +18,7 @@ export function useBlog() {
       try {
         pageToLoad === 1 ? setLoading(true) : setLoadingMore(true);
 
-         const minLoadTime = new Promise(resolve => setTimeout(resolve, 700));
+         const minLoadTime = new Promise(resolve => setTimeout(resolve, 100));
 
         const [res] = await Promise.all([
           fetch(`https://dev.to/api/articles?per_page=${PER_PAGE}&page=${pageToLoad}`, {
